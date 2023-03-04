@@ -1,0 +1,25 @@
+{
+	"name": "watermarkTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sourceSQLdatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "TableName",
+				"type": "varchar"
+			},
+			{
+				"name": "WatermarkValue",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "watermarkTable"
+		}
+	}
+}
