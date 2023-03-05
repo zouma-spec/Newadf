@@ -596,12 +596,10 @@
 				},
 				"parameters": {
 					"TableName": {
-						"type": "string",
-						"defaultValue": "ods.orders"
+						"type": "string"
 					},
 					"WatermarkColumn": {
-						"type": "string",
-						"defaultValue": "LastEditedWhen"
+						"type": "string"
 					}
 				},
 				"folder": {
