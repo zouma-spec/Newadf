@@ -1,0 +1,64 @@
+{
+	"name": "ds_DimEmp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_targetSQLdatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EmpID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "surrogatekey",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "Region",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EmpFunction",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Level",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Role",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StartDate",
+				"type": "date"
+			},
+			{
+				"name": "EndDate",
+				"type": "date"
+			},
+			{
+				"name": "iscurrent",
+				"type": "bit"
+			},
+			{
+				"name": "processtime",
+				"type": "datetime2",
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DimEmp"
+		}
+	}
+}
