@@ -7,6 +7,14 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ADFrui1"
 		},
+		"ls_EmployeeCSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_EmployeeCSV'"
+		},
+		"ls_EmployeeFile_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_EmployeeFile'"
+		},
 		"ls_sourceSQLdatabase_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_sourceSQLdatabase'"
@@ -14,6 +22,10 @@
 		"ls_targetSQLdatabase_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_targetSQLdatabase'"
+		},
+		"ls_EmployeeCSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://thisisaaccount.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -42,11 +54,20 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"ls_EmployeeCSV_accountKey": {
+						"value": "[parameters('ls_EmployeeCSV_accountKey')]"
+					},
+					"ls_EmployeeFile_connectionString": {
+						"value": "[parameters('ls_EmployeeFile_connectionString')]"
+					},
 					"ls_sourceSQLdatabase_connectionString": {
 						"value": "[parameters('ls_sourceSQLdatabase_connectionString')]"
 					},
 					"ls_targetSQLdatabase_connectionString": {
 						"value": "[parameters('ls_targetSQLdatabase_connectionString')]"
+					},
+					"ls_EmployeeCSV_properties_typeProperties_url": {
+						"value": "[parameters('ls_EmployeeCSV_properties_typeProperties_url')]"
 					}
 				}
 			},

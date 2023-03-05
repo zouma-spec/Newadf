@@ -5,11 +5,20 @@
 		"factoryName": {
 			"value": "ADFrui1"
 		},
+		"ls_EmployeeCSV_accountKey": {
+			"value": ""
+		},
+		"ls_EmployeeFile_connectionString": {
+			"value": ""
+		},
 		"ls_sourceSQLdatabase_connectionString": {
 			"value": ""
 		},
 		"ls_targetSQLdatabase_connectionString": {
 			"value": ""
+		},
+		"ls_EmployeeCSV_properties_typeProperties_url": {
+			"value": "https://thisisaaccount.dfs.core.windows.net/"
 		}
 	}
 }
