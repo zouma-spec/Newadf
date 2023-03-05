@@ -11,7 +11,8 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "EmployeeFile.csv",
-				"folderPath": "scd2trial"
+				"folderPath": "demo",
+				"container": "scd2"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
