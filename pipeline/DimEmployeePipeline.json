@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "DimEmployeeLoader2",
+						"referenceName": "DimEmployeeSCD2",
 						"type": "DataFlowReference"
 					},
 					"compute": {
@@ -28,7 +28,7 @@
 			}
 		],
 		"folder": {
-			"name": "Demos"
+			"name": "scd2"
 		},
 		"annotations": []
 	}

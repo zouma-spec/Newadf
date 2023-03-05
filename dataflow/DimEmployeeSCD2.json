@@ -1,5 +1,5 @@
 {
-	"name": "DimEmployeeLoader2",
+	"name": "DimEmployeeSCD2",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
@@ -55,10 +55,12 @@
 					"name": "TypeConversionsAndSetAttrs"
 				},
 				{
-					"name": "LookupIDs"
+					"name": "LookupIDs",
+					"description": "Lookup on 'TypeConversionsAndSetAttrs' from 'TypeConversions'. \nlookup EmpID from the source and target table that are matched"
 				},
 				{
-					"name": "ConditionalSplit1"
+					"name": "ConditionalSplit1",
+					"description": "Reading the value returned form the lookup. Conditionally distributing the data in iscurrent groups, based on columns '{1}'"
 				},
 				{
 					"name": "checkForChanges"
