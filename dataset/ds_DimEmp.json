@@ -10,13 +10,12 @@
 		"schema": [
 			{
 				"name": "EmpID",
-				"type": "bigint",
-				"precision": 19
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "surrogatekey",
-				"type": "bigint",
-				"precision": 19
+				"type": "nvarchar"
 			},
 			{
 				"name": "Region",
@@ -48,17 +47,18 @@
 			},
 			{
 				"name": "iscurrent",
-				"type": "bit"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "processtime",
-				"type": "datetime2",
-				"scale": 7
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
 			}
 		],
 		"typeProperties": {
-			"schema": "dbo",
-			"table": "DimEmp"
+			"tableName": "[dbo].[DimEmp]"
 		}
 	}
 }

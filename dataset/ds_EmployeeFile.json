@@ -2,16 +2,16 @@
 	"name": "ds_EmployeeFile",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_EmployeeCSV",
+			"referenceName": "ls_EmployeeFile",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": "EmployeeFiles.csv",
-				"fileSystem": "scd2trial"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "EmployeeFile.csv",
+				"folderPath": "scd2trial"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
