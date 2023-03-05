@@ -1,5 +1,5 @@
 {
-	"name": "pl_masterIncrementalCopyMultipleTables",
+	"name": "pl_master_IncrementalCopyMultipleTables",
 	"properties": {
 		"activities": [
 			{
@@ -59,8 +59,14 @@
 								},
 								"waitOnCompletion": true,
 								"parameters": {
-									"TableName": "@{item().TableName}",
-									"WatermarkColumn": "@{item().WatermarkColumn}"
+									"TableName": {
+										"value": "@{item().TableName}",
+										"type": "Expression"
+									},
+									"WatermarkColumn": {
+										"value": "@{item().WatermarkColumn}",
+										"type": "Expression"
+									}
 								}
 							}
 						}
