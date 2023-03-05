@@ -48,7 +48,7 @@
 					"isSequential": false,
 					"activities": [
 						{
-							"name": "Execute pl_IncrementalCopyOneTable_Parameterized",
+							"name": "Execute pl_child",
 							"type": "ExecutePipeline",
 							"dependsOn": [],
 							"userProperties": [],
