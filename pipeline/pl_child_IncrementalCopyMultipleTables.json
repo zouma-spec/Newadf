@@ -1,5 +1,5 @@
 {
-	"name": "pl_IncrementalCopyOneTable_Parameterized",
+	"name": "pl_child_IncrementalCopyMultipleTables",
 	"properties": {
 		"activities": [
 			{
@@ -25,8 +25,14 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "ds_sourceOrder",
-						"type": "DatasetReference"
+						"referenceName": "ds_sourceDatabase",
+						"type": "DatasetReference",
+						"parameters": {
+							"TableName": {
+								"value": "@pipeline().parameters.TableName",
+								"type": "Expression"
+							}
+						}
 					}
 				}
 			},
@@ -110,14 +116,26 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_sourceOrder",
-						"type": "DatasetReference"
+						"referenceName": "ds_sourceDatabase",
+						"type": "DatasetReference",
+						"parameters": {
+							"TableName": {
+								"value": "@pipeline().parameters.TableName",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_targetOrder",
-						"type": "DatasetReference"
+						"referenceName": "ds_targetDatabase",
+						"type": "DatasetReference",
+						"parameters": {
+							"TableName": {
+								"value": "@pipeline().parameters.TableName",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
@@ -176,7 +194,7 @@
 			}
 		},
 		"folder": {
-			"name": "incrementalCopyOneTable"
+			"name": "IncrementalCopyMultipleTables"
 		},
 		"annotations": []
 	}

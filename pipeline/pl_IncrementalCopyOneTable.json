@@ -1,5 +1,5 @@
 {
-	"name": "IncrementalCopyOneTable",
+	"name": "pl_IncrementalCopyOneTable",
 	"properties": {
 		"activities": [
 			{
@@ -159,6 +159,9 @@
 				}
 			}
 		],
+		"folder": {
+			"name": "incrementalCopyOneTable"
+		},
 		"annotations": []
 	}
 }
