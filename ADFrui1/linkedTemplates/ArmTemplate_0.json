@@ -1225,7 +1225,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DimEmployeeLoader2')]",
+			"name": "[concat(parameters('factoryName'), '/DimEmployeeSCD2')]",
 			"type": "Microsoft.DataFactory/factories/dataflows",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -1283,10 +1283,12 @@
 							"name": "TypeConversionsAndSetAttrs"
 						},
 						{
-							"name": "LookupIDs"
+							"name": "LookupIDs",
+							"description": "Lookup on 'TypeConversionsAndSetAttrs' from 'TypeConversions'. \nlookup EmpID from the source and target table that are matched"
 						},
 						{
-							"name": "ConditionalSplit1"
+							"name": "ConditionalSplit1",
+							"description": "Reading the value returned form the lookup. Conditionally distributing the data in iscurrent groups, based on columns '{1}'"
 						},
 						{
 							"name": "checkForChanges"
@@ -1511,7 +1513,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"dataflow": {
-								"referenceName": "DimEmployeeLoader2",
+								"referenceName": "DimEmployeeSCD2",
 								"type": "DataFlowReference",
 								"parameters": {},
 								"datasetParameters": {
@@ -1536,12 +1538,12 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Demos"
+					"name": "scd2"
 				},
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/dataflows/DimEmployeeLoader2')]"
+				"[concat(variables('factoryId'), '/dataflows/DimEmployeeSCD2')]"
 			]
 		},
 		{
